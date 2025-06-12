@@ -1,28 +1,28 @@
 body {
-    /* subtle vertical gradient background */
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     min-height: 100vh;
     font-size: 1rem;
     color: #212529;
 }
 
-main.container {
-    max-width: 480px;
-}
-
-.card {
-    border-radius: 1rem;
-    border: none;
-}
-
-.card.main-card {
-    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
-}
-
 h2 {
     font-weight: 600;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
+}
+
+footer {
+    color: #6c757d;
+}
+
+main.container {
+    max-width: 480px;
+}
+
+.main-card {
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+    border-radius: 1rem;
+    border: none;
 }
 
 .form-label {
@@ -42,12 +42,7 @@ input.form-control:focus {
 button.btn-primary {
     font-size: 1.1rem;
     padding: 0.625rem 0;
-    margin-bottom: 0.5rem;
     border-radius: 0.5rem;
-}
-
-footer {
-    color: #6c757d;
 }
 
 p.lead.text-muted {
@@ -70,7 +65,6 @@ p.lead.text-muted {
     cursor: pointer;
     vertical-align: middle;
     margin-top: 0;
-    /* remove default offset */
 }
 
 .form-switch.form-switch-md .form-check-label {
