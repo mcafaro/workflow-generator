@@ -24,7 +24,7 @@ function generateWorkflow() {
             workflow_dispatch: {},
         },
         ...(useBatchToken && {
-            env: { MLM_LICENSE_TOKEN: '${{ secrets.MyToken }}' }
+            env: { MLM_LICENSE_TOKEN: '${{ secrets.MLM_LICENSE_TOKEN }}' }
         }),
         jobs: {
             build: {
