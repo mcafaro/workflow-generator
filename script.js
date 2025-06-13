@@ -11,7 +11,7 @@ function parseRepo(input) {
     }
 }
 
-function createWorkflow() {
+function generateWorkflow() {
     const useBatchToken = document.getElementById('useBatchToken').checked;
     const useVirtualDisplay = document.getElementById('useVirtualDisplay').checked;
     const buildAcrossPlatforms = document.getElementById('buildAcrossPlatforms').checked;
@@ -86,7 +86,7 @@ function createWorkflow() {
 }
 
 
-document.getElementById('createForm').addEventListener('submit', function (e) {
+document.getElementById('generateForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const repoField = document.getElementById('repo');
@@ -98,7 +98,7 @@ document.getElementById('createForm').addEventListener('submit', function (e) {
     }
     repoField.classList.remove('is-invalid');
 
-    const workflow = createWorkflow();
+    const workflow = generateWorkflow();
     const encoded = encodeURIComponent(workflow);
 
     const filePath = '.github/workflows/matlab.yml';
@@ -109,7 +109,7 @@ document.getElementById('createForm').addEventListener('submit', function (e) {
 document.getElementById('downloadButton').addEventListener('click', function (e) {
     e.preventDefault();
 
-    const workflow = createWorkflow();
+    const workflow = generateWorkflow();
     const blob = new Blob([workflow], { type: 'text/yaml' });
     const url = URL.createObjectURL(blob);
 
